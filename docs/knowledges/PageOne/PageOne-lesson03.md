@@ -1,5 +1,7 @@
 # **Lesson-03**
+
 ## **for遍历循环**
+
 ```python
 for  临时变量  in  序列容器：
     执行语句
@@ -8,12 +10,14 @@ for  临时变量  in  序列容器：
 - 将序列容器中的数据元素一个一个拿出来赋值给临时变量
 ## **range()**
 - 返回整数序列
+
 ```python
 for i in range(3):
     print(i)
 # 结果：0 1 2
 # 默认从0开始，以1递增，到3结束，但是不包含3
 ```
+
 ```python
 for i in range(2,5):
     print(i)
@@ -38,6 +42,7 @@ for i in range(5,0,-1):
 ## **print()**
 
 - print(*objects, sep=' ', end='\n')
+
 ```python
 print('Hello', end='-')
 print('World')
