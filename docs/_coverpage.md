@@ -1,4 +1,4 @@
-![logo](_media/icon.png)
+![logo](_media/icon.png "zoom: 10%;")
 
 # 智慧鱼
 # Python课程知识总结
