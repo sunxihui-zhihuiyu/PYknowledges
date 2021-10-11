@@ -1,4 +1,4 @@
-![logo](_media/icon.png "zoom:1%")
+<img src='_media/icon.png' alt='logo' style='zoom:10%;'/>
 
 # 智慧鱼
 # Python课程知识总结
