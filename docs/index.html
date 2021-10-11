@@ -9,23 +9,19 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
-  <nav>
-    <a href="#/">入门</a>
-    <a href="#/zh-cn/">配置</a>
-  </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      log:'/_media/icon.png',
+      alias:{
+        '/.*/_sidebar.md': '/_sidebar.md'
+      }
       name: '',
       repo: '',
       coverpage:true,
       loadSidebar:true,
       sumMaxLevel:2,
       loadNavbar:true,
-      alias:{
-        '/.*/_sidebar.md': '/_sidebar.md'
-      }
+
     }
   </script>
   <!-- Docsify v4 -->
