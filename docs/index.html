@@ -12,21 +12,37 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      
-      name: '',
+      //文档标题
+      name: '🐟智慧鱼Python课程知识清单📕',
       repo: '',
+      //封面显示
       coverpage:true,
+      // 侧边栏
       loadSidebar:true,
       sumMaxLevel:2,
       loadNavbar:true,
-      alias:{
-        '/.*/_sidebar.md': '/_sidebar.md'
-      }
+      // 距离顶部间距
+      topMargin:25,
+      // 切换页面后，是否跳转到页面顶部
+      auto2top:true,
+      // 搜索框
+      search:{
++       paths:'auto',
++       placeholder: '🔍 搜索',
++       noData: '😒 找不到结果',
++       // Headline depth, 1 - 6
++       depth: 6,
++       maxAge: 86400000, // 过期时间，单位毫秒，默认一天
++     },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+   <!-- 全局搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <!-- 访问量统计 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
 

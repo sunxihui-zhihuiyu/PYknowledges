@@ -4,4 +4,7 @@
 - 点击**左侧项目**可观看单课知识总结🙂
 - 学习过程中发现文档编写错误，及时与我沟通谢谢🧐
 - 孙老师和各位智慧鱼小伙伴携手共进，加油！🤗
-[>>返回](/)
+
+<span id="busuanzi_container_site_pv" style='display:none'>
+    👀 本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
