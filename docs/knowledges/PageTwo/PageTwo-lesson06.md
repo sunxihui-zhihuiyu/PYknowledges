@@ -16,12 +16,12 @@
 > 导入方法
 
 ```python
-import 模块名    #导入整个模块
+import 模块名    # 导入整个模块
 例：import random
 ```
 
 ```python    
-import 模块名 as 变量名    #导入整个模块，并给模块起个别名
+import 模块名 as 变量名    # 导入整个模块，并给模块起个别名
 例：import random as r
 ```
 
