@@ -3,6 +3,7 @@
 ## **Python创始人**
 
 ![吉多·范罗苏姆（Guido van Rossum）](_media/Guido.jpg)
+<img src='_media/Guido.jpg' alt='Guido' style='zoom:50%;'/>
 
 ## **变量**
 
