@@ -4,7 +4,7 @@
 
 > 吉多·范罗苏姆（Guido van Rossum）
 
-<img src='_media/Guido.jpg' alt='Guido' style='zoom:10%;'/>
+<img src='_media/Guido.jpg' alt='Guido' style='zoom:20%;'/>
 
 ## **变量**
 
