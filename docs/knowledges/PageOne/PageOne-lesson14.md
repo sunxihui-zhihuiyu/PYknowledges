@@ -6,16 +6,16 @@
 
 - 以乌龟自身为坐标原点前进、转弯
 
-<img src='_media/1-14-3.png' alt='walk' style='zoom:100%;'/>
-<img src='_media/1-14-4.png' alt='turn' style='zoom:100%;'/>
+<img src='_media/1-14-3.png' alt='walk' style='zoom:20%;'/>
+<img src='_media/1-14-4.png' alt='turn' style='zoom:20%;'/>
 
 > 绝对坐标
 
 - 以画布窗体正中心为原点坐标
 goto()位移到某一坐标点，seth()转到某一固定方向
 
-<img src='_media/1-14-1.png' alt='walk' style='zoom:100%;'/>
-<img src='_media/1-14-2.png' alt='turn' style='zoom:100%;'/>
+<img src='_media/1-14-1.png' alt='walk' style='zoom:20%;'/>
+<img src='_media/1-14-2.png' alt='turn' style='zoom:20%;'/>
 
 ## **turtle坐标系相关指令**
 
