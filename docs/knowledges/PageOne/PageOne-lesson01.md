@@ -1,5 +1,9 @@
 # **Lesson-01**
 
+## **Python创始人**
+
+![吉多·范罗苏姆（Guido van Rossum）](_media/Guido.jpg "吉多·范罗苏姆")
+
 ## **变量**
 
 ```python
