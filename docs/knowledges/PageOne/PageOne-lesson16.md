@@ -5,8 +5,8 @@
 - 扇形是圆的一部分。
 - 在圆（或者扇形）中，圆弧切线与半径垂直。
 
-<img src='_media/1-16-1.png' alt='sector' style='zoom:200%;'/>
-<img src='_media/1-16-2.png' alt='draw_sector' style='zoom:200%;'/>
+<img src='_media/1-16-1.png' alt='sector' style='zoom:100%;'/>
+<img src='_media/1-16-2.png' alt='draw_sector' style='zoom:100%;'/>
 
 > 顺时针画扇形
 
