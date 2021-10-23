@@ -27,7 +27,7 @@ import turtle
 turtle.seth(100)
 turtle.forward(200)
 turtle.right(90)
-turtle.circle(200,60)
+turtle.circle(-200,60)
 turtle.right(90)
 turtle.forward(200)
 ```
