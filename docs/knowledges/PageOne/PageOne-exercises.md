@@ -251,6 +251,14 @@ for i in range(100,1000):
     one = i - hun * 100 - ten * 10 
     if i == one**3 + ten**3 + hun**3:
         print(i)
+
+# 方法三：
+for i in range(1,10):     # 百位数字
+    for j in range(0,10):   # 十位数字
+        for z in range(0,10):    # 个位数字
+            n = i*100 + j*10 + z
+            if i**3 + j**3 + z**3 == n:
+                print(n)
 ```
 
 
