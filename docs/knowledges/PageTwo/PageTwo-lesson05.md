@@ -4,6 +4,9 @@
 
 > 汉诺塔法则
 
+<img src='_media/2-5-1.png' alt='hanoi' style='zoom:40%;'/>
+<img src='_media/2-5-2.png' alt='hanoi' style='zoom:40%;'/>
+
 - 一次只能移动一个圆盘
 - 小圆盘必须在大圆盘之上
 - 将所有圆盘从A经过B移动到C
