@@ -18,8 +18,7 @@
 time.struct_time(tm_year=2021, tm_mon=10, tm_mday=23, tm_hour=11, tm_min=8, tm_sec=7, tm_wday=5, tm_yday=296, tm_isdst=0)
 ```
 
-> `time.strftime()`	# 返回特定格式时间，人类容易读懂的(配合符号使用可显示所需要的时间格式）
-例：2021-01-23 12:16:16
+> `time.strftime()`	# 返回特定格式时间，人类容易读懂的(配合符号使用可显示所需要的时间格式）例：2021-01-23 12:16:16
 
 ```python
 >>> import time
