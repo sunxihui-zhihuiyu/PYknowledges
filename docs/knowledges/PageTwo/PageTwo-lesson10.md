@@ -163,29 +163,6 @@ window.mainloop()
 
 <img src='_media/2-10-6.png' alt='text' style='zoom:40%;'/>
 
-### 5. Text
-
-Text是tkinter中提供的的一个多行文本区域，可用来收集(或显示)用户输入的文字
-
-在需要显示编辑用户、产品多行信息时，比如显示用户详细描述文字、产品简介等，支持随时编辑。
-
-```python
-import tkinter as tk    
-
-window = tk.Tk()       
-window.title('python')   
-window.geometry('500x300+300+300')
-
-# 在窗口界面设置加载Text控件 
-text = tk.Text(window, width=20, height=3,  font=('Arial', 14))
-# 放置文本显示框
-text.pack()
-
-window.mainloop()
-```
-
-<img src='_media/2-10-6.png' alt='text' style='zoom:40%;'/>
-
 ### 6. messagebox
 
 messagebox是用于显示应用程序的消息框，就是我们平常看到的弹框。
