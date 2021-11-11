@@ -12,6 +12,7 @@
 >>> student = ['小智',10]   # 首次赋值
 >>> id(student)
 1361676575744
+
 >>> student.append('男')    # 调用append方法，添加数据
 >>> id(student)    # 变量student地址不变，也就是增加元素后，还是它本身
 1361676575744
@@ -28,6 +29,7 @@
 >>> name = '小智'   # 首次赋值
 >>> id(name)
 2182300013744
+
 >>> name = '小鱼'    # 重新赋值
 >>> id(name)    # 变量name地址改变
 2182300200656
@@ -50,10 +52,13 @@
 
 ```python
 >>> name = 'python'
+
 >>> name[0]     # 获取第1个字符
 'p'
+
 >>> name[-1]    # 获取最后1个字符
 'n'
+
 >>> len(name)   # 字符串长度（共有几个字符）
 6
 ```
@@ -66,16 +71,22 @@
 
 ```python
 >>> name = 'Hello python!'
+
 >>> name[6:12]     # 返回下标为6-12之间的连续字符，包含6，不包含12
 'python'
+
 >>> name[1:12:2]    # 返回下标为1-12之间，间隔为2的字符，包含1，不包含12
 'el yhn'
+
 >>> name[1:]   # 返回下标为1之后的所有字符，包含1
 'hllo python!'
->>> name[:7]   # 返回下标为6之前的所有字符，不包含7
+
+>>> name[:7]   # 返回下标为7之前的所有字符，不包含7
 'hllo p'
+
 >>> name[::2]   # 从下标0开始，间隔2个字符，返回字符
 'Hlopto!'
+
 >>> name[::-1]   # 倒序返回所有字符
 '!nohtyp olleH'
 ```
@@ -84,10 +95,13 @@
 
 ```python
 >>> name = 'Hello python!'
+
 >>> name.find('o')   # 返回'o'第一次出现时候的索引值，不存在时候返回-1
 4
+
 >>> name.rfind('o')   # 返回'o'最后一次出现时候的索引值，不存在时候返回-1
 10
+
 >>> name.count('o',0,11)   # 查找指定字符串范围内，出现'o'的次数
 2
 ```
@@ -96,6 +110,7 @@
 
 ```python
 >>> name = 'Hello python!'
+
 >>> new_name = name.replace('o','-')   # 将字符串中的'o'替换为'-'，将结果赋值为新的变量，原变量不变
 >>> new_name   
 'Hell- pyth-n!'
@@ -107,16 +122,53 @@
 
 ```python
 >>> name = 'Hello python!'
+
 >>> new_name = name.lower()   # 将所有大写字符转为小写字符
 >>> new_name   
 'hello python!'
+
 >>> new_name = name.upper()   # 将所有小写字符转为大写字符
 >>> new_name   
 'HELLO PYTHON!'
+
 >>> new_name = name.swapcase()   # 将所有大小写字符互换
 >>> new_name   
 'hELLO PYTHON!'
+
 >>> new_name = name.title()   # 将所有单词首字母大写
 >>> new_name   
 'Hello Python!'
+```
+
+> 遍历字符串
+
+```python
+name = 'python'
+
+# 方法1
+for p in name:
+    print(p)
+
+# 方法2
+for i in range(len(name)):
+    print(name[i])
+```
+
+> 字符串格式化
+
+```python
+name = '小智'
+age = 10
+
+# 使用逗号','拼接
+print('我的名字是', name, ',今年', age, '岁了。')
+
+# 使用加号'+'拼接字符
+print('我的名字是' + str(name) + ',今年' + str(age) + '岁了。')
+
+# string.format()方法格式化字符串⭐
+print('我的名字是{},今年{}岁了。'.format(name,age))
+
+# f-string  方法格式化字符串⭐
+print(f'我的名字是{name},今年{age}岁了。')
 ```
