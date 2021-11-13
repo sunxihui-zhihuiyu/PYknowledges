@@ -205,34 +205,19 @@ for i in range(4):
     turtle.left(90)
 ```
 
-### **1-14：三数排序**⭐⭐
+### **1-14：数字知多少**⭐⭐
 
-**题目：** 输入三个整数x,y,z，请把这三个数由小到大输出。
+**题目：** 有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
 
-**程序分析：** 无
+**程序分析：** 程序分析：可填在百位、十位、个位的数字都是1、2、3、4。组成所有的排列后再去掉不满足条件的排列。
 
 ```python
-# 方法一：
-raw = []
-for i in range(3):
-    x = int(input('int{}: '.formate(i)))
-    raw.append(x)
-    
-for i in range(len(raw)):
-    for j in range(i,len(raw)):
-        if raw[i] > raw[j]:
-            raw[i], raw[j]  =raw[j], raw[i]
-print(raw)
-
-
-# 方法二：
-raw2 = []
-for i in range(3):
-    x = int(input('int{}: '.formate(i)))
-    raw2.append(x)
-print(sorted(raw2))
+for i in range(1,5):
+    for j in range(1,5):
+         for k in range(1,5):
+             if( i != k ) and (i != j) and (j != k):
+                 print (i,j,k)
 ```
-
 
 ### **1-15：九九乘法表**⭐⭐
 
@@ -318,10 +303,24 @@ print (s)
 
 **题目：** 输入3个数a,b,c，按大小顺序输出。
 
-**程序分析：** 同实例005。
+**程序分析：** 我们想办法把最小的数放到x上，先将x与y进行比较，如果x>y则将x与y的值进行交换，然后再用x与z进行比较，如果x>z则将x与z的值进行交换，这样能使x最小。然后比较y与z的值就可以。
 
 ```python
 # 方法一：
+x = int(input('x: '))
+y = int(input('y: '))
+z = int(input('z: '))
+
+if x > y:
+    x, y = y, x
+if x > z:
+    x, z = z, x
+if y > z:
+    y, z = z, y
+    
+print(x,y,z)
+
+# 方法二：
 raw = []
 for i in range(3):
     x=int(input('int{}：'.format(i+1)))
@@ -333,7 +332,7 @@ for i in range(len(raw)):
             raw[i], raw[j] = raw[j], raw[i]
 print(raw)
 
-# 方法二：
+# 方法三：
 raw2=[]
 for i in range(3):
     x = int(input('int{}：'.format(i+1)))
