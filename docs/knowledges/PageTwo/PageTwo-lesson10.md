@@ -194,7 +194,37 @@ window.mainloop()
 
 <img src='_media/2-10-7.png' alt='messagebox' style='zoom:40%;'/>
 
-### 7. 其他控件使用
+### 7. 放置控件的方式(以Label为例)
+
+> pack方法：按照上下左右的方式排列
+
+```python
+label = tk.Label(window, textvariable=var, bg='green', font=('宋体',14), width=30, height=2)
+label.pack(side='top')    # 放置在窗体上侧
+# label.pack(side='bottom')    # 放置在窗体下侧
+# label.pack(side='left')    # 放置在窗体左侧
+# label.pack(side='right')    # 放置在窗体右侧
+```
+
+> place方法：按照精确坐标的方式排列
+
+```python
+label = tk.Label(window, textvariable=var, bg='green', font=('宋体',14), width=30, height=2)   # 创建控件时候的大小是多少个字符，如width=30，表示控件宽度为30个字符
+
+label.place(x=100,y=200)    # 放置在窗体坐标为（100，200）的位置，以窗体左上角为（0，0）点坐标
+
+```
+
+> 放置控件时设置大小 与 创建控件时设置大小的单位不同
+
+```python
+label = tk.Label(window, textvariable=var, bg='green', font=('宋体',14), width=30, height=2)   # 创建控件时候的大小是多少个字符，如width=30，表示控件宽度为30个字符
+
+label.place(x=100,y=200, width=100,height=30)
+# 放置控件时候的大小是多少个像素，如width=100，表示控件宽度为100个像素，注意区别
+```
+
+### 8. 其他控件使用
 其他控件的使用可以观看官方网站
 <https://docs.python.org/zh-cn/3/library/tk.html>
 或者其他老师的博客
