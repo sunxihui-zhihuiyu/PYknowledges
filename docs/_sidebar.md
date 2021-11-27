@@ -29,3 +29,8 @@
   * [Lesson09-math模块](knowledges/PageTwo/PageTwo-lesson09)
   * [Lesson10-tkinter库1](knowledges/PageTwo/PageTwo-lesson10)
   * [Lesson11-tkinter库2](knowledges/PageTwo/PageTwo-lesson11)
+  * [Lesson12-词云制作](knowledges/PageTwo/PageTwo-lesson12)
+  * [Lesson13-Pygame游戏制作1](knowledges/PageTwo/PageTwo-lesson13)
+  * [Lesson14-Pygame游戏制作2](knowledges/PageTwo/PageTwo-lesson14)
+  * [Lesson15-Pygame游戏制作3](knowledges/PageTwo/PageTwo-lesson15)
+  * [Lesson16-](knowledges/PageTwo/PageTwo-lesson16)
