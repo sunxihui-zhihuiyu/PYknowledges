@@ -97,7 +97,7 @@ my_wordcloud = wordcloud.WordCloud(font_path = font,width = 800,height = 600,max
 font_path:字体路径； 
 width:词云图片宽度； 
 height:词云图片高度；
-max_words:最大字号；
+max_words:最多容纳字数；
 background_color:图片背景色
 '''
 my_wordcloud.generate('智慧鱼 是最好的 人工智能教育 学校')
@@ -105,3 +105,33 @@ my_wordcloud.to_file('my_wordcloud.png')
 ```
 
 <img src='_media/2-12-6.png' alt='wordcloud' style='zoom:40%;'/>
+
+## **综合词云项目**
+
+```python
+import wordcloud
+import jieba
+from imageio import imread    # 提前使用pip指令安装imageio库
+
+s = '一只乌鸦口渴了，它在低空盘旋着找水喝。找了很久，它才发现不远处有一个水瓶，\
+便高兴地飞了过去，稳稳地停在水瓶口，准备痛快地喝水了。可是，水瓶里水太少了，瓶口又小，瓶颈又长，\
+乌鸦的嘴无论如何也够不着水。这可怎么办呢？乌鸦想，把水瓶撞倒，就可以喝到水了。\
+于是，它从高空往下冲，猛烈撞击水瓶。可是水瓶太重了，乌鸦用尽全身的力气，水瓶仍然纹丝不动。\
+乌鸦一气之下，从不远处叼来一块石子，朝着水瓶砸下去。它本想把水瓶砸坏之后饮水，没想到石子不偏不倚，“扑通”一声正好落进了水瓶里。\
+乌鸦飞下去，看到水瓶一点儿都没破。细心的乌鸦发现，石子沉入瓶底，里面的水好像比原来高了一些。\
+乌鸦喝水乌鸦喝水“有办法了，这下我能喝到水了。”乌鸦非常高兴，它“哇哇”大叫着开始行动起来。\
+它叼来许多石子，把它们一块一块地投到水瓶里。随着石子的增多，水瓶里的水也一点儿一点儿地慢慢向上升……\
+终于，水瓶里的水快升到瓶口了，而乌鸦总算可以喝到水了。他站在水瓶口，喝着甘甜可口的水，心里是那么痛快、舒畅。'
+
+txt_list = jieba.lcut(s)
+
+txt = ' '.join(txt_list)      # 将分割之后的词汇列表，使用空格进行连接成为新的字符串。
+
+image = imread('crow_drinks_water.png')   # 获取生成词云的底图
+font = 'C:\Windows\Fonts\SimHei.ttf'
+my_wordcloud = wordcloud.WordCloud(font_path = font, background_color = 'white', mask = image)
+my_wordcloud.generate(txt)
+my_wordcloud.to_file('my_wordcloud.png')   # 生成词云的图
+```
+
+<img src='_media/2-12-7.png' alt='wordcloud' style='zoom:40%;'/>
