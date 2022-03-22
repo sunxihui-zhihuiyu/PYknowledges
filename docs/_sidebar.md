@@ -34,6 +34,7 @@
   * [Lesson14-Pygame游戏制作2](knowledges/PageTwo/PageTwo-lesson14)
   * [Lesson15-Pygame游戏制作3](knowledges/PageTwo/PageTwo-lesson15)
   * [Lesson16-异常处理](knowledges/PageTwo/PageTwo-lesson16)
+  * [阶段二练习题](knowledges/PageTwo/PageTwo-exercises)
 * [阶段三](knowledges/PageThree/PageThree)
   * [Lesson01-世界蓝图](knowledges/PageThree/PageThree-lesson01)
   * [Lesson02-编程中的父与子](knowledges/PageThree/PageThree-lesson02)
