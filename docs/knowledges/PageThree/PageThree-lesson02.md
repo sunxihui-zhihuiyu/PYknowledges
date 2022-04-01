@@ -74,7 +74,7 @@ my_electrocar.run()
 
 ## **水果与苹果**
 
-<img src='_media/3-1-2.png' alt='面向对象和面向过程' style='zoom:40%;'/>
+<img src='_media/3-2-3.png' alt='面向对象和面向过程' style='zoom:40%;'/>
 
 - 定义水果父类，并定义苹果、香蕉、橘子等子类。
     - 需求：
