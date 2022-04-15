@@ -19,7 +19,7 @@
 
     <img src='_media/3-4-1.jpg' alt='海洋' style='zoom:20%;'/>
     <img src='_media/3-4-2.png' alt='鲨鱼' style='zoom:40%;'/>
-    <img src='_media/3-4-3.png' alt='小鱼' style='zoom:20%;'/>
+    <img src='_media/3-4-3.png' alt='小鱼' style='zoom:60%;'/>
 
 - 知识回顾：pygame中加载图片的方法
     ```python
