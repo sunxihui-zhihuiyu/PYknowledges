@@ -95,7 +95,7 @@ file.close()
 ## 三、《乌鸦和狐狸.txt》
 
 
-> <a href="_media.乌鸦和狐狸.txt" title="乌鸦和狐狸">乌鸦贺狐狸文本下载</a>
+> <a href="_media/乌鸦和狐狸.txt" title="乌鸦和狐狸">乌鸦贺狐狸文本下载</a>
 
 ```python
 import jieba
