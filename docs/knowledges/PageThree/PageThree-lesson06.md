@@ -10,7 +10,7 @@
 
 **二进制文件**直接由0和1组成，没有统一字符编码。二进制是信息按照非字符但特定格式形式的文件，常见的二进制文件有可执行程序、图形、图像、声音等等。
 
-<srcs='_m'>
+<img src='_media/3-6-1.png' alt='文件类型' style='zoom:40%;'/>
 
 ## 二、文本文件操作
 
@@ -32,159 +32,91 @@ file_close()
 >>>  b'\xe9\x9d\x92\xe5\xb0\x91\xe5\xb9\xb4\xe4\xba\xba\xe5\xb7\xa5\xe6\x99\xba\xe8\x83\xbd\xe5\x9f\xba\xe7\xa1\x80\xe6\x95\x99\xe8\x82\xb2python\xe8\xaf\xbe\xe7\xa8\x8b\r\n'   # 以二进制形式打开文本文件
 ```
 
-### 2. Python的内置数据类型
+文件的操作步骤分为三步：打开-操作-关闭。
 
-python中，有些类型是已经内置好的，我们直接拿来用就可以了。就像，地球上的物种类别主要有动物、植物、原生生物（无核生物）、原核生物（单细胞真核生物）及真菌五大类。同样的，python中有一些内置的对象类型，主要为**数字类型、序列类型、映射类型、类、实例和异常**六大类。
+电脑系统中文件一般默认处于存储状态，所以需要进行文件的打开。当打不开的时候需要创建文件。
+当文件打开之后，文件处于占用状态，这时候我们可以通过一些方法对文件进行操作，例如读取文件中内容，或者往文件中写入内容。这时候的文件作为一个对象进行存在，采用`<a>.<b>()`方式进行操作，也就是文件对象的操作方法。
 
-在关于数据方面，python有六个标准的数据类型，**数字、字符串、元组、列表、集合和字典**。
+当操作之后，文件就需要关闭，关闭文件之后，内存释放对文件的控制使文件恢复存储状态。
 
-<img src='_media/3-5-1.png' alt='数据类型' style='zoom:40%;'/>
+大家思考一下，如果打开文件之后，不关闭会有什么后果？
 
-1. 数字类型中有三类，`整数(int)`、`浮点数(float)`和`复数(complex)`。
+<img src='_media/3-6-2.png' alt='文件操作' style='zoom:40%;'/>
 
-    本阶段，我们只对整数和浮点数进行学习。
+文件可以通过python内置函数`open()`进行打开，打开之后我们使用变量接收文件内容。我们可以将这个部分看作是类的实例化对象。
 
-    数字是单一的、不能再分的数据，属于`基本数据类型`。
+`open()`函数有两个参数：`文件名`和`打开模式`。
 
-2. 实际上计算机是需要同时处理多个数据的，这就需要将多个数据有效组织起来并统一表示，这类能够表示多个数据的类型称为`组合数据类型`。
+如果文件和程序文件在同一文件夹位置，则直接使用文件名即可，如果位于不同文件夹，则需要是文件的完整路径名称。
 
-    这就像一个人做一件事和一个团队做一件事情的区别。每个团队是由多个成员组成的。
+文件的打开模式，有读写两种模式，默认是'r'模式。
 
-    组合数据类型中，分为三类：`序列类型`、`集合类型`和`映射类型`。
+|打开模式|说明|
+|:---:|:---|
+|`r`|只读模式，如果文件不存在，则返回异常|
+|`w`|	覆盖写模式，文件不存在则创建，存在则完全覆盖|
+|`x`|	创建写模式，文件不存在则创建，存在则返回异常|
+|`a`|	追加写模式，文件不存在则创建，存在则在文件最后追加内容|
+|`b`|	二进制文件模式|
+|`t`|	文本文件模式，默认值|
+|`+`|	与r/w/x/a一同使用，在原功能基础上同时读写功能。|
 
-    - `序列类型`中的多个数据之间是`存在先后顺序`的，通过序号进行访问，这就像是一个小团队之间的成员都是有各自的位置的，或者排队的人都是有自己的顺序的。访问这些数据的时候，可以通过序号进行访问，这个序号也叫做`下标`或者`索引`。
-    
-        在之前学习过的字符串和列表就属于序列类型。
-
-    - `集合类型`中的多个数据之间是没有顺序的，并且这些数据之间`不能重复`，数据也只能是不可变的数据类型。
-        
-        这就像一个家庭就是一个集合，这个家庭中的人员是不会重复的，不会有两个爷爷存在，爷爷本身也不会改变。
-    - `映射类型`是`“键-值”`的表示方法，序列类型中的下标和对应的数据也可以看成是特殊的“键-值”。
-    
-        这就像一个团队中，每个人都有自己的身份，每个身份对应一个唯一的人，这个对应关系就是键值对。
-
-### 3. 序列类型
+### 1. 文件读取
 
 ```python
->>> name = '智慧鱼'   # 字符串类型
->>> scores = [40,60,60,70]  # 列表类型
->>> coordinate = (3,4)   # 元组类型
+file = open('python.txt', 'r', encoding = 'utf-8')
+print(file.readline(1))
+file.close()
 ```
 
-`元组`使用小括号()表示，元素之间使用逗号隔开。其余基本操作和列表都是一致的。
+|语句|说明|
+|:---:|:---|
+|`file_name.read(size=-1)`|从文件中读入整个文件内容，如果给出参数，读入签size长度的字符串或者字节流
+|`file_name.readline(size=-1)`|从文件中读入一行内容，如果给出参数，读入该行前size长度的字符串或者字节流
+|`file_name.readlines(hint=-1)`|从文件中读入所有行，以每行为元素形成一个列表，如果给出参数，读入hint行
 
-元组类型为tuple。
-
-元组类型表示一组特定的值，这组数值不可以改变。例如上述类型中，（3,4）表示在平面直角坐标系中，一个点的x轴坐标为3，y轴坐标为4。如果坐标值改变，则这个点就要变化。
+### 2. 文件写入
 
 ```python
-import turtle
-def draw_circle(r,*colors):
-    for color in colors:
-        turtle.fillcolor(color)
-        turtle.begin_color()
-        turtle.circle(r)
-        turtle.end_color()
-        r -= 20
+ls = ['我是智慧鱼','今年7岁了']
 
-draw_circle(100,'red','green','blue')
-
-# 在函数中，不定长参数colors的类型实际为元组。当传入实际参数后，colors = ('red','green','blue')
+file = open('python.txt', 'a+', encoding = 'utf-8')
+file.writelines(ls)
+file.seek(0)
+file.close()
 ```
 
-### 4. 集合类型  --- 集合  set
+|语句|说明|
+|:---:|:---|
+|`file_name.write(s)`|向文件写入一个字符串或者字节流
+|`file_name.writelines(lines)`|将一个元素拳为字符串的**列表**写入文件
+|`file_name.seek(offset)`|改变当前文件操作指针的位置，offset的值：(0——文件开头；1——当前位置；2——文件结尾。)
 
-集合类型中，包含0个或者多个数据的无序组合。在集合中的元素是不可以重复的。所以，我们可以使用集合过滤掉重复的元素。
+## 三、《乌鸦和狐狸.txt》
 
-集合中的元素必须是固定数据类型，也就是不可变数据类型，如数字、元组、字符串等。
 
-集合用大括号`{}`表示，可以用赋值语句生成一个集合。
-也可以使用set()函数生成集合，输入的参数可以实任何组合数据类型，返回结果是一个无重复且排序任意的集合。
-
-```python
->>> s = {60,90,80,50,60}
-{90,80,50,60}
-# 集合能将重复的元素60去掉，保持每个元素的唯一性
-
->>> p = set('banana')
-{'b','a','n'}
-```
-
-### 5. 映射类型 --- 字典dict
-
-在映射类型中，每项数据都是由`“键-值”`组成。每个元素就是一个键值对，也就是元素是（key, value）,元素之间是无序的。
-
-我们可以将`键（key）`理解为数据的`属性`，或者类别、标签，将`值（value）`了解为`属性内容`，或者值。
-
-映射类型主要以`字典（dict）`体现。就像常用的新华字典中，通过每个字，找到相对应的字的解释。
-
-字典也是由大括号{}表示，它和集合不同的是创建字典的时候可以通过{}创建一个空字典，但是创建集合的时候需要使用set(）函数进行创建。
-
-如家庭成员中，我们可以使用键值对表示家庭成员的称呼以及姓名，键和值之间使用冒号：进行连接，每组元素之间使用逗号隔开。
-
-我们可以通过字典中的键，索取相对应的值。这个方法和序列类型中的使用方法是一致的，不同的是序列类型中是使用下标或者索引获取相对应的值的。
-
-<img src='_media/3-5-2.png' alt='字典类型' style='zoom:40%;'/>
+> <a href="_media.乌鸦和狐狸.txt" title="乌鸦和狐狸">乌鸦贺狐狸文本下载</a>
 
 ```python
->>> family = {'爷爷':'老林', '爸爸':'大林', '儿子':'小林'}
->>> family['爷爷']
-'老林'
->>> family.keys()
-dict_keys(['爷爷', '爸爸', '儿子'])
->>> family.values()
-dict_values(['老林', '大林', '小林'])
->>> family.get('妈妈','不存在')   # 获取'妈妈'的值，如果不存在，就返回'不存在'
-'不存在'
->>> family.get('爷爷','不存在')   # 获取'爷爷'的值，如果不存在，就返回'不存在'
-'老林'
-```
+import jieba
 
-## 统计《Python之禅》的单词数量
+txt = '乌鸦和狐狸.txt'
 
-```python
-txt = '''
-The Zen of Python, by Tim Peters
+file = open(txt, 'r', encoding = 'utf-8')
+s = file.read()
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-'''
-# 创建空字典count
-count = {}
+words = jieba.lcut(s)
 
-# 将所有单词进行小写处理
-txt = txt.lower()
-
-# 将文本中特殊字符替换为空格
-for ch in "',.--*!@#$%^&()[]{}\|？/<>":
-    txt = txt.replace(ch,'')
-    
-# 使用split()方法将字符串txt按照空格进行分割，返回字符列表存入变量words中
-words = txt.split()
-
-# 遍历单词列表，使用get()方法查找字典count中的单词对应的值（单词数量），并在值上累加1
+counts = {}
 for word in words:
-    count[word] = count.get(word, 0) + 1
+    if len(word) == 1:
+        continue
+    else:
+        counts[word] = counts.get(word, 0) + 1
 
-# 遍历字典中元素，依次输出
-for word in count.items():
-    print(word)
+for count in counts.items():
+    print(count)
+    
+file.close()
 
 ```
