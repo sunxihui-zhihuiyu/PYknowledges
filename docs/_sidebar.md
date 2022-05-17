@@ -52,3 +52,6 @@
   * [Lesson14-项目综合应用-贪吃蛇 - 02](knowledges/PageThree/PageThree-lesson14)
   * [Lesson15-项目综合应用-飞机大战 - 01](knowledges/PageThree/PageThree-lesson15)
   * [Lesson16-项目综合应用-飞机大战 - 02](knowledges/PageThree/PageThree-lesson16)
+* [Python备忘单](knowledges/Beginners-Python-Cheat-Sheet)
+  * [初学者Python备忘单](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet)
+    * [变量和字符串](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Variables%20and%20Strings.md)
