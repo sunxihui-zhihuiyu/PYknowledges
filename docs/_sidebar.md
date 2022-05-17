@@ -57,4 +57,4 @@
     * [变量和字符串](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Variables%20and%20Strings.md)
     * [列表](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Lists.md)
     * [元组](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Tuples.md)
-    * [if条件句](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/If statements.md)
+    * [if条件句](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/If%20statements.md)
