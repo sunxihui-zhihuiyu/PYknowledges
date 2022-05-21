@@ -1,24 +1,18 @@
-# 变量和字符串  Variable and String
+# while循环 While loop
 
-变量用来存储数据。  
-字符串是被单引号或者双引号引用的一系列字符。
+当一个确定条件成立时候，while循环会一直重复执行一段代码。
 
-> 打印输出`Hello world`
+> 一个简单的while循环
 ```python
-print("Hello world!")
+current_value = 1
+while current_value <= 5:
+    print(current_value) current_value += 1
 ```
 
-> 使用变量存储`Hello world` 并打印输出
+>让用户选择什么时候退出
 ```python
-msg = "Hello world!"
-print(msg)
+msg = ''
+while msg != 'quit':
+    msg = input("What's your message? ")
+    print(msg)
 ```
-
-> 拼接字符串（合并字符串）
-```python
-first_name = 'albert'
-last_name == 'einstein'
-full_name = first_name + ' ' + last_name
-print(full_name)
-```
-

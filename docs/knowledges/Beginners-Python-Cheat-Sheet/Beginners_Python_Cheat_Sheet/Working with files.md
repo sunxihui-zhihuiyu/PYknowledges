@@ -27,3 +27,10 @@ filename = 'journal.txt'
 with open(filename, 'a') as file_object:
     file_object.write("\nI love making games.")
 ```
+
+> 对中文文件读写操作时候，需要设置解码类型为'utf-8'
+```python
+filename = 'journal.txt'
+with open(filename, 'a', encoding='utf-8') as file_object:
+    file_object.write("\nI love making games.")
+```

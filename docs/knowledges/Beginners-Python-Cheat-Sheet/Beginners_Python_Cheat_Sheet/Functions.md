@@ -1,24 +1,41 @@
-# 变量和字符串  Variable and String
+# 函数 Function
 
-变量用来存储数据。  
-字符串是被单引号或者双引号引用的一系列字符。
+函数是一段代码块，旨在完成一项特定的工作。传递给函数的信息称为实际参数，函数接收的信息称为形式参数。
 
-> 打印输出`Hello world`
+> 一个简单的函数
 ```python
-print("Hello world!")
+def greet_user():
+    """Display a simple greeting.""" 
+    print("Hello!")
+
+greet_user()
 ```
 
-> 使用变量存储`Hello world` 并打印输出
+>传入一个实际参数
 ```python
-msg = "Hello world!"
-print(msg)
+def greet_user(username):
+    """Display a personalized greeting."""
+    print("Hello, " + username + "!")
+
+greet_user('jesse')
 ```
 
-> 拼接字符串（合并字符串）
+>定义一个默认参数
 ```python
-first_name = 'albert'
-last_name == 'einstein'
-full_name = first_name + ' ' + last_name
-print(full_name)
+def make_pizza(topping='bacon'):
+    """Make a single-topping pizza."""
+    print("Have a " + topping + " pizza!")
+
+make_pizza()
+make_pizza('pepperoni')
 ```
 
+>函数返回值
+```python
+def add_numbers(x, y):
+    """Add two numbers and return the sum."""
+    return x + y
+    
+sum = add_numbers(3, 5)
+print(sum)
+```

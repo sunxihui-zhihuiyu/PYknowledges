@@ -1,24 +1,40 @@
-# 变量和字符串  Variable and String
+# 字典 Dictionary
 
-变量用来存储数据。  
-字符串是被单引号或者双引号引用的一系列字符。
+字典存储彼此之间相互有关联的信息。  
+字典中每一个元素就是一对键值对（`key-value`）。
 
-> 打印输出`Hello world`
+> 一个简单的字典
 ```python
-print("Hello world!")
+alien = {'color':'green','points':5}
 ```
 
-> 使用变量存储`Hello world` 并打印输出
+> 获取值的方法
 ```python
-msg = "Hello world!"
-print(msg)
+print("The alien's color is" + alien['color'])
 ```
 
-> 拼接字符串（合并字符串）
+> 增加新的键值对
 ```python
-first_name = 'albert'
-last_name == 'einstein'
-full_name = first_name + ' ' + last_name
-print(full_name)
+alien['x_position'] = 0
 ```
 
+> 遍历查看所有的键值对
+```python
+fav_numbers = {'eric': 17, 'ever': 4}
+for name, number in fav_numbers.items():
+    print(name + ' loves ' + str(number))
+```
+
+> 遍历查看所有的键
+```python
+fav_numbers = {'eric': 17, 'ever': 4}
+for name, number in fav_numbers.keys():
+    print(name + ' loves a number')
+```
+
+> 遍历查看所有的值
+```python
+fav_numbers = {'eric': 17, 'ever': 4}
+for name, number in fav_numbers.values():
+    print(str(name) + 'is a favorite')
+```
