@@ -41,6 +41,7 @@ for x in range(1,11):
 
 > 列表推导式
 ```python
+# 列表推导式是Python构建列表（list）的一种快捷方式,可以使用简洁的代码就创建出一个列表.
 squares = [x**2 for x in range(1,11)]
 ```
 
