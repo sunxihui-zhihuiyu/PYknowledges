@@ -59,7 +59,7 @@
     * [元组](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Tuples.md)
     * [if条件句](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/If%20statements.md)
     * [字典](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Dictionaries.md)
-    * [输入](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Userf%20input.md)
+    * [输入](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/User%20input.md)
     * [while循环](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/While%20loops.md)
     * [函数](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Functions.md)
     * [类](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Classes.md)
