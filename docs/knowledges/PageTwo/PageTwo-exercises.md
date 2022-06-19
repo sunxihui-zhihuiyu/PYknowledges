@@ -61,7 +61,7 @@ def age(n):
         c = 10
     else:
         c = age(n - 1) + 2
-        return c
+    return c
     
 print ("第五个人的年龄是：", age(5))
 ```
@@ -88,7 +88,7 @@ n = int(input("验证码的长度是："))
 print(generate_code(n))
 ```
 
-### **1-06：反向求出生年月**⭐
+### **2-06：反向求出生年月**⭐
 
 **题目：** 定义函数birth(), 输入参数年龄age, 通过time模块方向求出出生年份。
 
@@ -106,7 +106,7 @@ result = birth(10)   # 调用函数
 print(result)    # 打印结果
 ```
 
-### **1-07：利用函数绘图**⭐
+### **2-07：利用函数绘图1**⭐
 
 **题目：** 定义函数drawRect(), 绘制方形，调用函数绘制以下图形。
 每个正方形边长为200，颜色分别为`'red'、'green'、'blue'`
@@ -132,7 +132,37 @@ drawRect('green')
 drawRect('blue')
 ```
 
-### **1-08：掷色子**⭐
+### **2-08：利用函数绘图2**⭐
+
+**题目：** 定义函数drawCircle(), 绘制圆形，调用函数绘制以下图形。
+在左上角坐标为（-400, 400）,右上角坐标为（400，-400）的区域范围内，调用函数，绘制随机大小、随机颜色的圆。
+其中圆的半径限定在50-200之间，圆的颜色可以用RGB值进行表示。
+调用函数，画出3个随机的圆，
+
+<img src='_media/2-17-2.png' alt='函数绘图2' style='zoom:40%;'/>
+
+**程序分析：** 无
+
+```python
+import turtle
+import random
+
+def drawCircle():
+    turtle.colormode(255)
+    turtle.penup()
+    turtle.goto(random.randint(-400,400),random.randint(-400,400))
+    turtle.pendown()
+    turtle.fillcolor(random.randint(0,255),random.randint(0,255),random.randint(0,255))
+    turtle.begin_fill()
+    turtle.circle(random.randint(50,200))
+    turtle.end_fill()
+    
+drawCircle()
+drawCircle()
+drawCircle()
+```
+
+### **2-09：掷色子**⭐
 
 **题目：** 每个骰子有1-6个点。随机投掷三个骰子，三个骰子点数之和小于5的时候，则结果显示“小”；三个骰子点数之和大于等于5的时候，则结果显示“大”。
 
