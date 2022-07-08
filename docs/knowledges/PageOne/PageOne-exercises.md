@@ -115,7 +115,7 @@ print(len(s))
 
 ```python
 for i in range(3):
-    n = int('input a number: ')
+    n = int(input('input a number: '))
     print('*' * n)
 ```
 ### **1-11：数字组合** ⭐⭐
