@@ -31,10 +31,10 @@
 def divisionOperation(n1,n2):
     try:
         return n1/n2
-except ZeroDivisionError:
-    return '除数不能为0'
-except:
-    return '请输入正确的数字'
+    except ZeroDivisionError:
+        return '除数不能为0'
+    except:
+        return '请输入正确的数字'
 
 print(divisionOperation(5,2))    # 结果：2.5
 print(divisionOperation(5,0))    # 结果：除数不能为0
@@ -49,10 +49,10 @@ print(divisionOperation(5,'2'))  # 结果：请输入正确的数字
 def divisionOperation(n1,n2):
     try:
         number = n1/n2
-except:
-    return '请输入正确的数字'
-else:
-    return number
+    except:
+        return '请输入正确的数字'
+    else:
+        return number
 
 print(divisionOperation(5,2))    # 结果：2.5
 print(divisionOperation(5,0))    # 结果：请输入正确的数字

@@ -199,3 +199,23 @@ def dice():
 
 print(dice())
 ```
+
+### **2-10：异常处理1**⭐
+
+**题目：** 在python数学运算的学习中，输入两个数字number1和number2，比较两个数字，打印较大的数字。如果输入的不是数字，则程序会抛出异常。
+请编写两个数字比较大小的程序，同时捕获可能出现的数据异常（NameError）。
+
+**程序分析：** 使用try/except语句捕获异常
+
+```python
+try:
+    number1 = eval(input('Input number1: '))
+    number2 = eval(input('Input number2: '))
+except NameError:
+    print('请输入数字')
+else:
+    if number1 > number2:
+        print('较大的数字是{}'.format(number1))
+    else:
+        print('较大的数字是{}'.format(number2))
+```
