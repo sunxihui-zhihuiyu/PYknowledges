@@ -65,3 +65,5 @@
     * [类](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Classes.md)
     * [文件操作](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Working%20with%20files.md)
     * [异常](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet/Exceptions.md)
+
+* [MineCraft Python](knowledges/Adventures%20in%20Minecraft.pdf)
