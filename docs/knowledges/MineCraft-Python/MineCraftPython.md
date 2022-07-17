@@ -4,5 +4,5 @@
 
 课程是在《Adventures in Minecraft》基础上进行制作。
 
-我的世界资源包下载地址 <https://musetransfer.com/s/j1zcyffn6>（有效期至2023年7月17日）》
+我的世界资源包下载地址 <https://musetransfer.com/s/36q77h9fb>（有效期至2023年7月17日）》
 
