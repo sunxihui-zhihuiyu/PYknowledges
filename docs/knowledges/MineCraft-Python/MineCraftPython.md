@@ -63,5 +63,5 @@
 [《Adventures in Minecraft》课程资源](Adventures%20in20%Minecraft.pdf)
 
 ```pdf
-Adventures in Minecraft.pdf
+MineCraft-Python/Adventures_in_Minecraft.pdf
 ```
