@@ -60,12 +60,12 @@
 
 请打开以下链接进行课程学习。
 
-![《Adventures in Minecraft》课程资源](_media//Adventures_in_Minecraft.pdf)
-
-<a href="_media//Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft" download="Adventures_in_Minecraft.pdf">Adventures_in_Minecraft</a> 
-
-<a href="_media//Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft">Adventures_in_Minecraft</a>  
+<a href="_media//Adventures_in_Minecraft.pdf" title="《Adventures_in_Minecraft》课程资源">Adventures_in_Minecraft》课程资源</a>  
 
 ```pdf
-「课程项目案例-英文.pdf」https://www.aliyundrive.com/s/kAuSc2xtkYo
+https://www.aliyundrive.com/s/kAuSc2xtkYo
+```
+
+```pdf
+https://sunxihui-zhihuiyu.github.io/PYknowledges/_media//Adventures_in_Minecraft.pdf
 ```
