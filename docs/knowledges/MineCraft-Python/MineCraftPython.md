@@ -60,11 +60,11 @@
 
 请打开以下链接进行课程学习。
 
-![《Adventures in Minecraft》课程资源](MineCraft-Python/Adventures_in_Minecraft.pdf)
+![《Adventures in Minecraft》课程资源](_media//Adventures_in_Minecraft.pdf)
 
-<a href="MineCraft-Python/Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft" download="Adventures_in_Minecraft.pdf">Adventures_in_Minecraft</a> 
+<a href="_media//Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft" download="Adventures_in_Minecraft.pdf">Adventures_in_Minecraft</a> 
 
-<a href="MineCraft-Python/Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft">Adventures_in_Minecraft</a>  
+<a href="_media//Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft">Adventures_in_Minecraft</a>  
 
 ```pdf
 MineCraft-Python/Adventures_in_Minecraft.pdf
