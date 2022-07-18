@@ -58,7 +58,7 @@
 
 ## **教学及程序案例**
 
-Adventures_in_Minecraft》课程资源
+《Adventures in Minecraft》课程资源
 
 ```pdf
 https://sunxihui-zhihuiyu.github.io/PYknowledges/_media//Adventures_in_Minecraft.pdf
