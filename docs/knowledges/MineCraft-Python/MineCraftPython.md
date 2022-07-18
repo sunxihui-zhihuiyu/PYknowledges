@@ -60,9 +60,11 @@
 
 请打开以下链接进行课程学习。
 
-![《Adventures in Minecraft》课程资源](Adventures%20in20%Minecraft.pdf)
-<a href="Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft" download="三国演义.txt">三国演义(中文)下载</a>  
-<a href="Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft">Adventures_in_Minecraft</a>  
+![《Adventures in Minecraft》课程资源](MineCraft-Python/Adventures_in_Minecraft.pdf)
+
+<a href="MineCraft-Python/Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft" download="Adventures_in_Minecraft.pdf">Adventures_in_Minecraft</a> 
+
+<a href="MineCraft-Python/Adventures_in_Minecraft.pdf" title="Adventures_in_Minecraft">Adventures_in_Minecraft</a>  
 
 ```pdf
 MineCraft-Python/Adventures_in_Minecraft.pdf
