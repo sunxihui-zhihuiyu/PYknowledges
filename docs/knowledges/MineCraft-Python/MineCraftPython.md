@@ -60,4 +60,8 @@
 
 请打开以下链接进行课程学习。
 
-[《Adventures in Minecraft》课程资源](knowledges/MineCraft-Python/Adventures%20in20%Minecraft.pdf)
+[《Adventures in Minecraft》课程资源](Adventures%20in20%Minecraft.pdf)
+
+```pdf
+	Adventures%20in20%Minecraft.pdf
+```
