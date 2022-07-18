@@ -58,13 +58,7 @@
 
 ## **教学及程序案例**
 
-请打开以下链接进行课程学习。
-
-<a href="_media//Adventures_in_Minecraft.pdf" title="《Adventures_in_Minecraft》课程资源">Adventures_in_Minecraft》课程资源</a>  
-
-```pdf
-https://www.aliyundrive.com/s/kAuSc2xtkYo
-```
+Adventures_in_Minecraft》课程资源
 
 ```pdf
 https://sunxihui-zhihuiyu.github.io/PYknowledges/_media//Adventures_in_Minecraft.pdf
