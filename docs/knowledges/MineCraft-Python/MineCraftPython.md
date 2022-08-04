@@ -58,6 +58,8 @@
 
 ## **教学及程序案例**
 
+Minecraft 方块列表：<https://minecraftitemids.com/>
+
 《Adventures in Minecraft》课程资源
 
 ```pdf
