@@ -150,7 +150,7 @@ num_responses = len(fav_languages)
 
 ---
 
-# 8. 嵌套-字典列表
+# 8. 嵌套-列表中嵌套字典
 
 有时将一组字典存储在列表中很有用，这称为嵌套。
 
@@ -198,7 +198,7 @@ users = [
         'username': 'mcurie'
     }
         ]
-        
+
 # Show all information about each user. 
 for user_dict in users: 
     for k, v in user_dict.items(): 
@@ -206,211 +206,109 @@ for user_dict in users:
     print("\n")
 ```
 
-> 临时改变列表排序方法
-```python
-print(sorted(users))
-print(sorted(users, reverse=True))
-```
+---
 
-> 倒序列表
+# 9. 嵌套-字典中嵌套列表
+
+将列表存储在字典中，可以让每个键关联多个值。
+
+> 在字典中存储列表
 ```python
-users.reverse()
+# Store multiple languages for each person.
+fav_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell']
+    }
+
+# Show all responses for each person.
+for name, langs in fav_languages.items():
+    print(name + ": ")
+    for lang in langs:
+        print("- " + lang)
 ```
 
 ---
 
-# 9. 遍历列表
+# 10. 嵌套-字典中嵌套字典
 
-列表可以包含数百万个项目，因此 Python 提供了一个循环遍历列表中所有项目的有效方法。 什么时候您设置了一个循环，Python 从列表中提取每个项目一次并将其存储在一个临时变量中。这个临时变量的名字应该是单数列表名称的版本。
-缩进的代码块构成了循环，您可以在其中处理每个单独的项目。 任何未缩进的行在循环完成后运行。
+您可以将字典存储在另一个字典中。 在这个例子中，每个与键关联的值本身就是一个字典。
 
-> 打印列表中所有的元素
+> 在字典中存储字典
 ```python
-for user in users:
-    print(user)
-```
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton',
+        },
+    'mcurie': {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+        }
+    }
 
-> 给每一个元素打印一条信息，并在遍历完成之后发出一个总的信息。
-```python
-for user in users:
-    print("Welcome, " + user + "!")
+for username, user_dict in users.items():
+    print("\nUsername: " + username)
+    full_name = user_dict['first'] + " "
+    full_name += user_dict['last']
+    location = user_dict['location']
 
-print("Welcome, we're glad to see you all!")
-```
-
----
-
-# 10. `range()`函数
-
-您可以使用 `range()` 函数来处理一组有效的数字。 `range()` 函数默认从 0 开始，到给出的参数值截止（不包含此参数）。 您可以使用 list() 函数有效地生成一个大量的数字。
-
-> 打印从0-1000的数字
-```python
-for number in range(1001):
-    print(number)
-```
-
-> 打印从1-1000的数字
-```python
-for number in range(1,1001):
-    print(number)
-```
-
-> 生成1-1000000的数字列表
-```python
-numbers = list(range(1,1000001))
+    print("\tFull name: " + full_name.title())
+    print("\tLocation: " + location.title())
 ```
 
 ---
 
-# 11. 简单的数据统计
+# 11. 有序字典（OrderedDict）的使用
 
-您可以通过包含数字的列表进行简单的数据统计。
+标准 Python 字典中的键值对是无序的， 字典只保留每个键与其值之间的关联。 如果你想保留添加键和值的顺序，使用一个有序字典（OrderedDict）。
 
-> 获取列表中的最小值
+> 保留键值对的顺序
 
 ```python
-ages = [93, 99, 66, 17, 85, 1, 35, 82, 2, 77]
-youngest = min(ages)
-```
+from collections import OrderedDict
 
-> 获取列表中的最大值
-```python
-ages = [93, 99, 66, 17, 85, 1, 35, 82, 2, 77]
-oldest = max(ages)
-```
+# Store each person's languages, keeping track of who respoded first.
+fav_languages = OrderedDict()
 
-> 获取所有元素的和
-```python
-ages = [93, 99, 66, 17, 85, 1, 35, 82, 2, 77]
-total_years = sum(ages)
-```
+fav_languages['jen'] = ['python', 'ruby']
+fav_languages['sarah'] = ['c']
+fav_languages['edward'] = ['ruby', 'go']
+fav_languages['phil'] = ['python', 'haskell']
 
----
-
-# 12. 列表切片
-
-您可以使用列表中的任何元素集。 列表的一部分称为切片。 从索引您想要的第一项开始切片列表，然后添加一个冒号和索引你想要的最后一个项目。 
-省略第一个索引表示从列表的开头开始切片，省略最后一个索引表示切片到列表的末尾。
-
-> 获取前三个元素
-```python
-finishers = ['kai', 'abe', 'ada', 'gus', 'zoe']
-first_three = finishers[:3]    # ['kai', 'abe', 'ada']
-```
-
-> 获取中间三个元素
-```python
-middle_three = finishers[1:4]    # ['abe', 'ada', 'gus']
-```
-
-> 获取最后三个元素
-```python
-last_three = finishers[-3:]    # ['ada', 'gus', 'zoe']
+# Display the results, in the same order they were entered.
+for name, langs in fav_languages.items():
+    print(name + ":")
+    for lang in langs:
+        print("- " + lang)
 ```
 
 ---
 
-# 13. 复制列表
+# 12. 创建1000000个字典
 
-要复制列表，请从第一项开始切片，然后在最后一项结束。 
-如果您尝试复制列表而不使用这种方法，无论你对复制的列表做什么，都会影响原始列表。
+如果所有字典都存在相似数据，可以使用循环生成大量的字典。
 
-> 复制列表
+> 1000000个aliens
 ```python
-finishers = ['kai', 'abe', 'ada', 'gus', 'zoe']
-copy_of_finishers = finishers[:]    # ['kai', 'abe', 'ada', 'gus', 'zoe']
-```
+aliens = []
 
----
+# Make a million green aliens, worth 5 points
+# each. Have them all start in one row.
+for alien_num in range(1000000):
+    new_alien = {}
+    new_alien['color'] = 'green'
+    new_alien['points'] = 5
+    new_alien['x'] = 20 * alien_num
+    new_alien['y'] = 0
+    aliens.append(new_alien)
 
-# 14. 列表推导式
+# Prove the list contains a million aliens.
+num_aliens = len(aliens)
 
-您可以根据一个数字范围或另一个列表使用循环生成列表。 这是一个常见的操作，因此 Python 提供了一种更有效的方法来执行此操作。
-列表推导起初可能看起来很复杂， 请熟练使用for 循环方法，要编写推导式，请为要存储在列表中的值定义一个表达式，然后编写一个 for 循环来生成制作列表所需的输入值。
-
-> 使用循环生成一个有序数字列表
-```python
-squares = []
-for x in range(1, 11):
-    square = x**2
-    squares.append(square)
-```
-
-> 使用列表推导式生成一个有序数字列表
-```python
-squares = [x**2 for x in range(1, 11)]
-```
-
-> 使用循环将列表中每个元素首字母转换为大写
-```python
-names = ['kai', 'abe', 'ada', 'gus', 'zoe']
-
-upper_names = []
-for name in names:
-    upper_names.append(name.upper())
-```
-
-> 使用列表推导式将列表中每个元素首字母转换为大写
-```python
-names = ['kai', 'abe', 'ada', 'gus', 'zoe']
-
-upper_names = [name.upper() for name in names]
-```
-
----
-
-# 15. 元组
-
-元组就像一个列表，但是一旦定义了一个元组，就不能改变它。（你可以覆盖整个元组，但是您不能更改元组中的单个元素。）
-元组适合存储在整个生命周期中不应更改的信息一个程序。 
-元组使用圆括号包含元组中的信息。 
-
-> 定义一个元组
-```python
-dimensions = (800, 600)
-```
-
-> 遍历一个元组
-```python
-for dimension in dimensions:
-    print(dimension)
-```
-
-> 重新编写一个元祖
-```python
-dimensions = (800, 600)
-print(dimensions)
-
-dimensions = (1200, 900)
-```
-
----
-
-# 16. 代码可视化
-
-当您第一次学习数据结构时，例如列表，它有助于可视化 Python 是如何处理程序中的信息。 
-<https://pythontutor.com/> 是一个很棒的工具，用于查看 Python 如何跟踪信息列表。
-尝试在 pythontutor.com 上运行以下代码，然后运行你自己的代码。
-
-> 创建一个列表并打印列表中的值
-```python
-dogs = []
-dogs.append('willie')
-dogs.append('hootz')
-dogs.append('peso')
-dogs.append('goblin')
-
-for dog in dogs:
-    print("Hello " + dog + "!")
-print("I love these dogs!")
-
-print("\nThese were my first two dogs:")
-old_dogs = dogs[:2]
-for old_dog in old_dogs:
-    print(old_dog)
-    
-del dogs[0]
-dogs.remove('peso')
-print(dogs)
+print("Number of aliens created:")
+print(num_aliens)
 ```
