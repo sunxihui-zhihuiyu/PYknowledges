@@ -1,142 +1,209 @@
-列表以特定顺序存储一系列项目。
-列表允许您将一组信息存储在一个地方，无论你只有几件还是几百万件的项目。 列表是 Python 最强大的功能之一。
+Python 的字典允许你将两项相关的信息进行匹配连接。 每一条信息在一个字典内存储为键值对。
+当你提供一个键，Python 返回关联的值。 您可以遍历所有键值对、所有键或所有值。
 
-# 1. 定义一个列表 list
+# 1. 定义一个字典 dictionary
 
-使用方括号定义列表，并使用逗号将列表中的各个项目分开。 使用复数命名列表，使您的代码更易于阅读。
+使用花括号`{}`来定义字典。 使用冒号连接键和值，并使用逗号分隔单独的键值对。
 
-> 创建列表
+> 创建字典
 ```python
-users = ['val', 'bob', 'mia', 'ron', 'ned']
+alien_0 = {'color': 'green', 'points': 5}
 ```
 
 ---
 
-# 2. 访问元素
+# 2. 访问值
 
-列表中的各个元素根据其访问位置，称为索引。 第一个元素的索引是0，第二个元素的索引为 1，以此类推。负索引是指列表末尾的项目。 
-要得到一个特定的元素，写下列表的名称，然后方括号中元素的索引。
+要访问与单个键关联的值，请给出字典的名称，然后将键放在一组方括号内。 如果您要的键不在字典，就会出错。
+您还可以使用 `get()` 方法，如果键不存在，该方法返回 `None`，而不是错误。 如果键不在字典，你也可以指定一个默认值，
 
-> 获取第一个元素
+> 获取存在键值对的值
 ```python
-first_user = users[0]
+alien_0 = {'color': 'green', 'points': 5}
+
+print(alien_0['color'])
+print(alien_0['points'])
 ```
 
-> 获取第二个元素
+> 使用`get()`获取值
 ```python
-first_user = users[1]
-```
+alien_0 = {'color': 'green'}
 
-> 获取最后一个元素
-```python
-first_user = users[-1]
-```
----
+alien_color = alien_0.get('color')
+alien_points = alien_0.get('points', 0)
 
-# 3. 修改单个元素
-
-定义列表后，您可以更改列表中的元素。 你可以通过索引来修改对应的元素。
-
-> 修改一个元素
-```python
-users[0] = 'valerie'
-users[-2] = 'ronald'
+print(alien_color)    # 'green'
+print(alien_points)   # 0
 ```
 
 ---
 
-# 4. 增加元素
+# 3. 增加新的键值对
 
-您可以在列表末尾增加一个元素，或者在列表中任意一个位置插入一个元素。
+您可以将任意数量的键值对存储在一个字典，直到您的计算机内存不足。 
+可以为现有字典添加一个新键值，方法是给出字典和方括号中的新键，以及将其设置为等于新值。
+这也允许您从空字典开始，然后添加相关的键值对。
 
-> 在列表尾部增加一个元素
+> 增加一个键值对
 ```python
-user.append('amy')
+alien_0 = {'color': 'green', 'points': 5}
+
+alien_0['x'] = 0
+alien_0['y'] = 25
+alien_0['speed'] = 1.5
 ```
 
-> 从空列表开始增加元素
+> 给一个空字典增加一个键值对
 ```python
+alien_0 = {}
+
+alien_0['color'] = 'green'
+alien_0['points'] = 5
+```
+
+---
+
+# 4. 修改值 
+
+您可以在通过键修改字典中对应的值。请给出字典的名字和将键放在方括号内，并且提供新的值。
+
+> 修改字典中的值
+```python
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+
+# Change the alien's color and point value.
+alien_0['color'] = 'yellow'
+alien_0['points'] = 10
+print(alien_0)
+```
+
+---
+
+# 5. 删除键值对
+
+您可以使用 `del` 关键字、字典名称及后跟方括号中的键，删除键及其关联值。
+
+> 删除键值对
+```python
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+
+del alien_0['points']
+print(alien_0)
+```
+
+---
+
+# 6. 遍历字典
+
+您可以通过三种方式遍历字典：您可以循环遍历所有键值对、所有键或所有值。
+如果要按顺序处理字典信息，您可以对循环中的键进行排序。
+
+> 遍历字典所有键值对
+```python
+# Store people's favorite languages.
+fav_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+
+# Show each person's favorite language.
+for name, language in fav_languages.items():
+    print(name + ": " + language)
+```
+
+> 遍历字典所有的键
+```python
+# Show everyone who's taken the survey.
+for name in fav_languages.keys():
+    print(name)
+```
+
+> 遍历字典所有的值
+```python
+# Show all the languages that have been chosen.
+for language in fav_languages.values():
+    print(language)
+```
+
+> 按顺序遍历字典所有的键
+```python
+# Show each person's favorite language, 
+# in order by the person's name.
+for name in sorted(fav_languages.keys()):
+    print(name + ": " + language)
+```
+
+---
+
+# 7. 字典长度
+
+您可以在字典中找到键值对的数量。
+
+> 字典长度
+```python
+num_responses = len(fav_languages)
+```
+
+---
+
+# 8. 嵌套-字典列表
+
+有时将一组字典存储在列表中很有用，这称为嵌套。
+
+> 将字典存储在列表中
+```python
+# Start with an empty list.
 users = []
-users.append('val')
-users.append('bob')
-users.append('mia')
+
+# Make a new user, and add them to the list.
+new_user = {
+    'last':'fermi',
+    'first':'enrico',
+    'username':'efermi'
+    }
+users.append(new_user)
+
+# Make another new user, and add them as well.
+new_user = {
+    'last': 'curie',
+    'first': 'marie',
+    'username': 'mcurie'
+    }
+users.append(new_user)
+
+# Show all information about each user.
+for user_dict in users:
+    for k, v in user_dict.items():
+        print(k + ':' + v)
+    print('\n')
 ```
 
-> 在特定位置插入一个元素
+> 您也可以不使用 append(), 直接定义字典列表
 ```python
-users.insert(0, 'joe')
-users.insert(3, 'bea')
-```
-
----
-
-# 5. 删除元素
-
-您可以按元素在列表中的位置或按元素的值来删除元素。
-
-> 按位置删除元素
-```python
-del users[-1]
-```
-
-> 按值删除元素
-```python
-users.remove('mia')
-```
-
-> 分配布尔值
-```python
-game_active = True
-can_edit = False
-```
-
----
-
-# 6. 弹出元素
-
-如果您想使用从列表中要删除的元素，您可以“弹出”该元素。 
-默认情况下，` pop()` 返回列表中的最后一个元素，但您也可以从列表中的任何位置弹出元素。
-
-> 弹出列表中最后一个元素
-```python
-most_recent_user = users.pop()
-print(most_recent_user)
-```
-
-> 弹出列表中第一个元素
-```python
-first_user = users.pop(0)
-print(first_user)
-```
-
----
-
-# 7. 列表长度
-
-使用 `len()` 函数返回列表中元素的数量。
-
-> 列表长度
-```python
-num_users = len(users)
-print("We have " + str(num_users) + " users.")
-```
-
----
-
-# 8. 列表排序
-
-`sort()` 方法永久更改列表的顺序，也就是改变列表本身的顺序。
-`sorted()` 函数返回列表的副本，留下原名单不变。
-您可以对列表中的项目进行排序字母顺序或逆字母顺序，你也可以颠倒列表的原始顺序。 请记住，小写和大写字母可能会影响排序顺序。
-
-> 永久改变列表排序方法
-```python
-users.sort()
-```
-
-> 以反向字母的顺序永久改变列表排序方法
-```python
-users.sort(reverse=True)
+# Define a list of users, where each user 
+# is represented by a dictionary. 
+users = [ 
+    { 
+        'last': 'fermi', 
+        'first': 'enrico', 
+        'username': 'efermi'
+    },
+    { 
+        'last': 'curie', 
+        'first': 'marie', 
+        'username': 'mcurie'
+    }
+        ]
+        
+# Show all information about each user. 
+for user_dict in users: 
+    for k, v in user_dict.items(): 
+        print(k + ": " + v) 
+    print("\n")
 ```
 
 > 临时改变列表排序方法
@@ -342,7 +409,7 @@ print("\nThese were my first two dogs:")
 old_dogs = dogs[:2]
 for old_dog in old_dogs:
     print(old_dog)
-
+    
 del dogs[0]
 dogs.remove('peso')
 print(dogs)
