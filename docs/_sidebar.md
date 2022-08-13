@@ -58,4 +58,5 @@
   * [字典](knowledges/Beginners-Python-Cheat-Sheet/Dictionaries.md)
   * [if条件和while循环](knowledges/Beginners-Python-Cheat-Sheet/If_Statements_and_While_Loops.md)
   * [函数](knowledges/Beginners-Python-Cheat-Sheet/Functions.md)
+  * [类](knowledges/Beginners-Python-Cheat-Sheet/Classes.md)
 * [MineCraft Python](knowledges/MineCraft-Python/MineCraftPython.md) 
