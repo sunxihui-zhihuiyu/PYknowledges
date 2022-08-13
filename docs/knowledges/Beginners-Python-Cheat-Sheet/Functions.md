@@ -160,6 +160,7 @@ greet_users(usernames)
 
 > 允许函数修改列表
 - 在下列案例中，初始列表是空列表，第二个列表是非空列表。
+
 ```python
 def print_models(unprinted, printed):
     """3d print a set of models."""
@@ -180,6 +181,7 @@ print("Printed:", printed)
 
 > 阻止函数修改列表
 - 在下列案例中，初始列表没有被改变。
+
 ```python
 def print_models(unprinted, printed):
     """3d print a set of models."""
@@ -262,6 +264,7 @@ def make_pizza(size, *toppings):
 
 > 调用一个存在的模块
 - 文件：making_pizzas.py
+
 ```python
 import pizza
 
@@ -296,6 +299,7 @@ mp('small', 'bacon', 'pineapple')
 
 > 调用模块中的所有函数
 - 一般情况下不建议使用这种方式，因为它可能会由于函数重名而造成错误。
+
 ```python
 from pizza import *
 
