@@ -52,14 +52,14 @@ SQLite数据库管理工具: <https://sqlitestudio.pl/>
 
 ## 四、 Sqlite3 数据库操作
 
-> 1、调用 `insert()语句` 插入单条数据
+> 1、调用 `insert语句` 插入单条数据
 
 ```python
 import sqlite3
 con = sqlite3.connect('scores.db') #打开或创建数据库
 cur = con.cursor() #获取游标
 
-# 调用insert()语句插入单条数据
+# 调用insert语句插入单条数据
 cur.execute('''insert into score values('小黑',10,95)''')
 
 con.commit()  # 调用提交事务，对数据库的修改生效
@@ -69,14 +69,14 @@ con.close() #关闭连接
 
 <img src='_media/3-9-6.png' alt='sqlite3操作' style='zoom:40%;'/>
 
-> 2、调用 `insert()语句` 插入多条数据
+> 2、调用 `insert语句` 插入多条数据
 
 ```python
 import sqlite3
 con = sqlite3.connect('scores.db') #打开或创建数据库
 cur = con.cursor() #获取游标
 
-# 调用insert()语句插入数值
+# 调用insert语句插入数值
 datas = [('小白',11,90),('小灰',11,85)]
 insert_datas_sql = '''insert into score values (?,?,?)'''
 cur.executemany(insert_datas_sql, datas)
@@ -107,7 +107,7 @@ while True:
     else:
         break
 
-# 调用insert()语n句插入数值
+# 调用insert语n句插入数值
 insert_datas_sql = '''insert into score values (?,?,?)'''
 cur.executemany(insert_datas_sql, datas)
 
