@@ -147,6 +147,8 @@ while True:
 
 > 面向过程程序设计（POP） `Procedure-Oriented Programming`
 
+<img src='_media/3-12-2.png' alt='账单信息管理系统' style='zoom:40%;'/>
+
 ```python
 import sqlite3
 
@@ -304,4 +306,3 @@ while True:
         close_connection_database()
         break
 ```
-<img src='_media/3-12-2.png' alt='账单信息管理系统' style='zoom:40%;'/>
