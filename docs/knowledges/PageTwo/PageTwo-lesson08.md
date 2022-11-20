@@ -14,7 +14,7 @@
 
 ```python
 >>> import random
->>> random.randint(1,10)   # 返回0-10之间的随机数，包含0和10
+>>> random.randint(0,10)   # 返回0-10之间的随机数，包含0和10
 2
 ```
 
