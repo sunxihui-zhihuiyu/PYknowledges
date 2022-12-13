@@ -117,13 +117,12 @@
   <!-- 侧栏折叠 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <!-- LaTeX display engine script Here -->
+  <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
-    <!-- 离线模式 -->
-    <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('sw.js')
-    }
-    </script>
+  <!-- 离线模式 -->
+  <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {navigator.serviceWorker.register('sw.js')}
+  </script>
 </body>
 </html>
 
