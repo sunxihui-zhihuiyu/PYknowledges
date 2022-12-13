@@ -135,7 +135,7 @@ print(numberSum)
 
 > 常见算法时间复杂度
 
-1. $$O(1)$$
+1. $O(1)$
 
 ```python
 i = 10
