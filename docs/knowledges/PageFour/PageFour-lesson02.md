@@ -1,113 +1,113 @@
 # **Lesson-02**
 
-## **继承和多态**
+## **数组（array）和列表（list）**
 
-> 封装和继承
-- Python相对比与其他语言，有三个主要的特点：封装、继承和多态。
-- 在汽车中，如果满足四个轮子、含有发动机提供动力，我们将这些车辆称之为汽车。我们将总结特征的过程，就是可以看作是封装。
-- 我们将汽车的所有特性可以封装起来，创建一个类，然后可以根据动力燃料来源，分为燃油车和电动汽车，这些分类既含有汽车的所有特征，又有自己独特的性质，这个过程称之为继承和多态。
-- 燃油汽车属拥有汽车的所有属性，这个过程称之为继承；同时汽车又有燃油汽车和电动汽车等多个汽车分类，这称之为多态。
+> 数组（array）
 
-<img src='_media/3-2-1.png' alt='继承和多态' style='zoom:40%;'/>
+存储一个固定大小的相同类型元素的顺序集合。数组是用来存储一系列数据，但它往往被认为是一系列相同类型的变量。  
+数组的声明并不是声明一个个单独的变量，比如 number0、number1、...、number99，而是声明一个数组变量，比如 numbers，然后使用 numbers[0]、numbers[1]、...、numbers[99] 来代表一个个单独的变量。  
+所有的数组都是由连续的内存位置组成。最低的地址对应第一个元素，最高的地址对应最后一个元素。  
 
-- 在python中，我们可以定义一个父类，然后定义一个子类，如果子类继承了父类的特征，则在子类后面加上父类名。
-- 如果一个子类继承了一个父类，则称之为单继承，如果继承了多个父类，则称之为多继承。多继承时，用逗号隔开多个继承的类。
+<img src='_media/4-2-0.png' alt='数组' style='zoom:40%;'/>
 
-```python
-class ParentClass:
-    # 定义父类
-    pass
+> 数组（array）和列表（list）的不同
 
-class SubClass1(ParentClass):
-    # 定义子类，子类继承父类
-    pass
-```
+- 数组
+  - C、C++、Java
+  - 存储的数据必须是相同数据类型
+- 列表
+  - Python
+  - 存储的数据可以是任意数据类型
 
-> 多态和重构
-- 为了体现燃油汽车和电动汽车类的多态，可以在每个子类下定义每种汽车各自不同的方法，比如燃油汽车需要加油，电动汽车需要充电。
-在实例化对象之后，分别给燃油汽车对象加油然后跑起来，给电动汽车对象充电然后跑起来。这就体现了类的多态性。
-- 在燃油汽车和电动汽车继承汽车类的时候，继承了品牌、型号和生产时间三种属性，但是燃油汽车还需要一个加油数量的属性，电动汽车有充电时长的属性。这些属性是在汽车父类的基础上进行继承，并增加的属性。
-在编写子类属性的时候，首先需要进行父类属性的初始化，然后再增加子类的特有属性。
-对父类属性的重新构造的顺序为先继承父类属性， 然后对属性进行构造。其写法有两种。
-大家可以尝试子类汽车对父类汽车的run(）方法进行重构。
+## Python 变量的本质
 
-<img src='_media/3-2-2.png' alt='重构' style='zoom:40%;'/>
+在高级语言中，变量是对内存及其地址的抽象。  
+对于python而言，python的一切变量都是对象，变量的存储，采用了引用语义的方式，存储的只是一个变量的值所在的内存地址，而不是这个变量的只本身。 
 
-```python
-class Car:
-    def __init__(self, brand, model, year):
-        self.brand = brand
-        self.model = model
-        self.year = year
-        self.odometer_reading = 0
+> 引用语义
 
-    def run(self):
-        print('The {} {} car is running.'.format(self.brand, self.model))
+引用语义：在python中，变量保存的是对象(值)的引用，我们称为引用语义。采用这种方式，变量所需的存储空间大小一致，因为变量只是保存了一个引用。也被称为对象语义和指针语义。  
 
-class GasCar(Car):
-    def __init__(self, brand, model, year, capacity):
-        Car.__init__(self, brand, model, year)    # 对汽车父类进行继承
-        # 或者  Super(GasCar,self).__init__(brand, model, year)
-        self.capacity = capacity    # 增加属性
-    def refuel(self):
-        print('The {} {} car has been filled up with {} liters \
- of  gas.'.format(self.brand, self.model, self.capacity))
-        
-class ElectroCar(Car):
-    def __init__(self, brand, model, year, duration):  
-        Car.__init__(self, brand, model, year)  # 对汽车父类进行继承
-        # 或者  Super(ElectroCar,self).__init__(brand, model, year)
-        self.duration = duration  # 增加属性
+> 值语义
 
-    def charge(self):
-        print('The {} {} car has been charged for {} hours..'.format(self.brand, self.model, self.duration))
+值语义：有些语言采用的不是这种方式，它们把变量的值直接保存在变量的存储区里，这种方式被我们称为值语义，例如C语言，采用这种存储方式，每一个变量在内存中所占的空间就要根据变量实际的大小而定，无法固定下来。
 
-my_car = Car('audi', 'A6', 2021)
-my_gascar = GasCar('Buick', 'regal', 2021, 5)
-my_electrocar = ElectroCar('BYD', 'qin', 2021, 0.5)
-my_car.run()
-my_gascar.refuel()
-my_gascar.run()
-my_electrocar.charge()
-my_electrocar.run()
-```
+由于python中的变量都是采用的引用语义，数据结构可以包含基础数据类型，导致了在python中每个变量中都存储了这个变量的地址，而不是值本身。  
 
-## **水果与苹果**
+<img src='_media/4-2-1.png' alt='变量' style='zoom:40%;'/>
 
-<img src='_media/3-2-3.png' alt='面向对象和面向过程' style='zoom:40%;'/>
+在案例中，根据直观的印象（值语义），是先将 1 存储在变量 a 中，然后将 2 存储在 a 中，替换 1。所以最后 a 的值就是 2.
+但是在 python 中，采用的是引用的方式，a=1 的处理方式实质上是将a 指向 1，然后如果 a=2，则将 a 指向 2。所以这也造成了在 python 中一个变量可存储不同的数据类型。
 
-- 定义水果父类，并定义苹果、香蕉、橘子等子类。
-    - 需求：
-    1. 所有水果都具有颜色、形状和口味等性质；
-    2. 所有水果都可以被吃掉；
-    3. 苹果这类水果还具有价格属性；
-    4. 我需要购买一定数量的水果，并根据价格计算最终价格；
-    5. 买了苹果之后，才能吃苹果。
+> Python 变量的语义引用
+
+<img src='_media/4-2-2.png' alt='变量' style='zoom:40%;'/>
+
+<img src='_media/4-2-3.png' alt='变量' style='zoom:40%;'/>
+
+<img src='_media/4-2-4.png' alt='变量' style='zoom:40%;'/>
+
+<img src='_media/4-2-5.png' alt='变量' style='zoom:40%;'/>
+
+## 线性表
+
+> 线性表的顺序存储形式
+
+数组中的数据元素本身连续存储，每个元素所占的存储单元大小固定并且相同，所以我们可以通过下标（逻辑地址）依次找到每一个元素。  
+而python中列表是元素外置的顺序表，列表中实际存储的是对应元素的内存地址。所以能够保证每个元素的大小是相同的，并且可以通过元素地址找到对应的元素。
+
+<img src='_media/4-2-6.png' alt='顺序存储' style='zoom:40%;'/>
+
+在顺序表的存储过程中，如果遇到这样的情况该如何处理？
+
+<img src='_media/4-2-7.png' alt='顺序存储' style='zoom:40%;'/>
+
+在新建顺序表之初，计算机需要定义这个顺序表的最大存储空间、顺序表的类型等信息，Python中默认list的初始内存空间是80字节。
+如上图所示，假如我们想要拓展这个列表，但是后面的内存已经被占用了，这时候10就无法插入列表中。这时候，计算机会重新分配一个更大的内存空间（一般是原来内存的2倍），并将原来的列表重新存储在新的内存中。
+
+> 顺序表的链式存储
+
+<img src='_media/4-2-8.png' alt='链式存储' style='zoom:40%;'/>
+
+我们还可以这样存储数据，为线性表中的每个元素单独进行存储，每次存储单个元素的时候，还要存储下一个元素的地址。这样我们就能够依次找到每个元素所在位置了。  
+这就是链表。
+
+> 线性结构——链表 (了解)
+
+链表是由一系列节点组成的元素集合。  
+每个节点包含两个部分，数据域 item 和指向下一个节点的指针 next。通过节点之间的相互连接，最终串联成一个链表。 
 
 ```python
-class Fruit:
-    '''定义水果类'''
-    def __init__(self, color, shape, taste):
-        self.color = color
-        self.shape = shape
-        self.taste = taste
-
-    def eat(self):
-        print('It\'s {}.'.format(self.taste))
-
-class Apple(Fruit):
-    '''定义苹果类'''
-    def __init__(self, color, shape, taste, price):
-        Fruit.__init__(self, color, shape, taste)
-        self.price = price
-        
-    def buy(self,number):
-        sum_price = self.price * number
-        print('I bought {} apples, which cost me {} yuan.'.format(number, sum_price))
-    def eat(self):
-        print('The apple is {}.'.format(self.taste))
-
-apple1 = Apple('red','round','sweet',5.0)
-apple1.buy(10)
-apple1.eat()
+class Node:
+    def __init__(self, item):
+        self.item = item
+        self.next = None 
 ```
+
+<img src='_media/4-2-9.png' alt='链表' style='zoom:40%;'/>
+
+## 列表的深入操作
+
+> 试题1：
+
+```python
+a = [1, 2]
+b = [1, 2]
+a += [3]
+print(a)
+print(b)
+```
+
+> 试题2：
+
+```python
+a = [1, 2]
+b = a
+a += [3]
+print(a)
+print(b)
+```
+
+- 猜测两个程序的运行结果
+- 实际运行两个程序，得到结果
+- 通过内存管理，分析运行结果
