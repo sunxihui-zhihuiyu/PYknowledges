@@ -41,13 +41,21 @@
 
 > Python 变量的语义引用
 
-<img src='_media/4-2-2.png' alt='变量' style='zoom:40%;'/>
+- b = a
+  
+<img src='_media/4-2-2.png' alt='变量' style='zoom:40%;'/>  
 
-<img src='_media/4-2-3.png' alt='变量' style='zoom:40%;'/>
+- a += 1
+  
+<img src='_media/4-2-3.png' alt='变量' style='zoom:40%;'/>  
 
-<img src='_media/4-2-4.png' alt='变量' style='zoom:40%;'/>
+- li.append(10)
+  
+<img src='_media/4-2-4.png' alt='变量' style='zoom:40%;'/>  
 
-<img src='_media/4-2-5.png' alt='变量' style='zoom:40%;'/>
+- 列表存储
+  
+<img src='_media/4-2-5.png' alt='变量' style='zoom:40%;'/>  
 
 ## 线性表
 
