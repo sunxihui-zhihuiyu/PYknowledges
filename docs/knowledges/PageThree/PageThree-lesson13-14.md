@@ -74,9 +74,7 @@ class Snakes:
 
 - 创建食物类的文件
 
-  
 ```python
-
 import pygame
 import random
 
@@ -97,7 +95,6 @@ class Food:
                 allpos.append(pos)
             self.rect.left = random.choice(allpos)
             self.rect.top = random.choice(allpos)
-
 ```
 
 > **snake_main.py**
