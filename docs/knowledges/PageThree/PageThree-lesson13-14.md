@@ -69,9 +69,11 @@ class Snakes:
         self.body.insert(0,self.body[0])
 ```
 
+
 > **food_class.py**
 
 - 创建食物类的文件
+
   
 ```python
 
