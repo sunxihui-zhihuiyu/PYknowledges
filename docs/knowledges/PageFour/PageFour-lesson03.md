@@ -54,8 +54,8 @@ class Stack:
 
     def size(self):
         return len(self.items)
-
 ```
+
 
 > 使用一般的列表结构就可以实现栈
 
@@ -80,7 +80,8 @@ class Stack:
 `(() `        不匹配
 
 
-<img src='_media/4-3-3.png' alt='栈' style='zoom:40%;'/>
+<img src='_media/4-3-3.png' alt='栈' style='zoom:50%;'/>
+
 
 ```python
 # 方法一：
@@ -160,7 +161,7 @@ print(brackets_match('((())(())))'))
 
 `[(]) `            不匹配
 
-<img src='_media/4-3-4.png' alt='栈' style='zoom:40%;'/>
+<img src='_media/4-3-4.png' alt='栈' style='zoom:50%;'/>
 
 ```python
 # 方法一：
