@@ -2,11 +2,11 @@
 
 ## **应用：十进制转二进制**
 
-<img src='_media/4-4-1.png' alt='栈' style='zoom:40%;'/>
+<img src='_media/4-4-1.png' alt='栈' style='zoom:30%;'/>
 
 将十进制整数转化为二进制
 
-<img src='_media/4-4-2.png' alt='栈' style='zoom:40%;'/>
+<img src='_media/4-4-2.png' alt='栈' style='zoom:60%;'/>
 
 ```python
 # 方法一：
@@ -68,11 +68,11 @@ print(divideBy2(38))
 
 ## **应用：十进制转其他进制**
 
-<img src='_media/4-4-3.png' alt='栈' style='zoom:40%;'/>
+<img src='_media/4-4-3.png' alt='栈' style='zoom:30%;'/>
 
 将十进制整数转化为其他进制
 
-<img src='_media/4-4-4.png' alt='栈' style='zoom:40%;'/>
+<img src='_media/4-4-4.png' alt='栈' style='zoom:60%;'/>
 
 ```python
 # 方法一：
