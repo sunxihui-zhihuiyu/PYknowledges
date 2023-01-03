@@ -28,13 +28,13 @@
 
 推荐同学们一款免费且好玩的打字练习网站[蓝豆打字](https://www.ldou.com/)，进行日常打字练习。
 
-网站页面设计稍微有些不合理，需要缩小页面才能找到打字联系的通道。
+网站页面设计稍微有些不合理，需要缩小页面才能找到打字练习的通道。
 
 官方网址：<https://www.ldou.com/>
 
-<img src='_media/0-2-1.png' alt='typing' style='zoom:40%;'/>
+<img src='_media/0-2-1.png' alt='typing' style='zoom:30%;'/>
 
-<img src='_media/0-2-2.png' alt='typing' style='zoom:40%;'/>
+<img src='_media/0-2-2.png' alt='typing' style='zoom:30%;'/>
 
 > ZType-打字练习游戏
 
@@ -44,6 +44,6 @@
 
 官方网址：<https://zty.pe/>
 
-<img src='_media/0-2-3.png' alt='typing' style='zoom:40%;'/>
+<img src='_media/0-2-3.png' alt='typing' style='zoom:30%;'/>
 
-<img src='_media/0-2-4.png' alt='typing' style='zoom:40%;'/>
+<img src='_media/0-2-4.png' alt='typing' style='zoom:30%;'/>
