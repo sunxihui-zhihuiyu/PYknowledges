@@ -24,14 +24,26 @@
 
 <img src='_media/0-1-5.png' alt='typing' style='zoom:40%;'/>
 
->Ratatype
+> 蓝豆打字
 
-推荐同学们一款免费且好玩的打字联系网站Ratatype，进行日常打字练习。
+推荐同学们一款免费且好玩的打字练习网站[蓝豆打字](https://www.ldou.com/)，进行日常打字练习。
 
-Ratatype是免费的学习打字网站，它能够教你用准确有效的方法练习打字。而且它的课程设计的也恰到好处，不会长倒让人厌倦，都是刚刚好。而且你也可以任何时候测试你的打字速度，并把这个打字速度和别人比较。
+网站页面设计稍微有些不合理，需要缩小页面才能找到打字联系的通道。
 
-官方网址：<https://www.ratatype.com/>
+官方网址：<https://www.ldou.com/>
 
 <img src='_media/0-2-1.png' alt='typing' style='zoom:40%;'/>
 
 <img src='_media/0-2-2.png' alt='typing' style='zoom:40%;'/>
+
+> ZType-打字练习游戏
+
+推荐同学们一款免费且好玩的打字练习游戏网站[ZType-打字练习游戏](https://zty.pe/)，进行日常打字练习。
+
+需要等待网站慢慢加载。
+
+官方网址：<https://zty.pe/>
+
+<img src='_media/0-2-3.png' alt='typing' style='zoom:40%;'/>
+
+<img src='_media/0-2-4.png' alt='typing' style='zoom:40%;'/>
