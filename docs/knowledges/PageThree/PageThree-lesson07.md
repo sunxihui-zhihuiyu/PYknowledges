@@ -178,4 +178,4 @@ test = my_sum(3,4)
 
 > <a href="_media/三国演义.txt" title="三国演义" download="三国演义.txt">三国演义(中文)下载</a>  
 
-> <a href="_mediahamlet.txt" title="hamlet" download="hamlet.txt">哈姆雷特(英文)下载</a>
+> <a href="_media/hamlet.txt" title="hamlet" download="hamlet.txt">哈姆雷特(英文)下载</a
