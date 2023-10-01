@@ -57,6 +57,7 @@
   - [Lesson03-数据结构-栈](knowledges/PageFour/PageFour-lesson03)
   - [Lesson04-数据结构-栈案例](knowledges/PageFour/PageFour-lesson04)
   - [Lesson05-数据结构-队列](knowledges/PageFour/PageFour-lesson05)
+  - [Lesson06-数据结构-双端队列](knowledges/PageFour/PageFour-lesson06)
 - [Python 备忘单](knowledges/Beginners-Python-Cheat-Sheet/Documentation.md)
   - [初学者 Python 备忘单](knowledges/Beginners-Python-Cheat-Sheet/Beginners_Python_Cheat_Sheet.md)
   - [列表](knowledges/Beginners-Python-Cheat-Sheet/Lists.md)
